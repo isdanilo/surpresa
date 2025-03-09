@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="761938.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presente Romântico</title>
+    <style>
+        /* Estilização do corpo */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #00CED1 0%, #3AA7C9 50%, #1A4D69 100%);
+
+
+
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Brilho no título */
+        h1 {
+            color: #ffffff;
+            font-size: 60px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+            animation: glow 2s ease-in-out infinite alternate;
+            margin: -15px 0;
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Aumentando o tamanho do título da segunda página */
+        #photoTitle {
+            font-size: 40px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.3);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        /* Estilização da imagem acima do botão */
+        .top-image {
+            max-width: 25%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilização do botão */
+        .button {
+            background: #007A99;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 22px;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 50px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #0099B9;
+            transform: translateY(-10px);
+            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Esconde a foto e mensagem inicialmente */
+        .hidden {
+            display: none;
+        }
+
+        /* Estilização da foto */
+        .photo {
+            max-width: 25%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.3);
+            margin-top: 40px;
+            animation: balloonEffect 0.8s ease-out forwards;
+        }
+
+        /* Estilização da mensagem */
+        .message {
+            margin-top: 20px;
+            font-size: 28px;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        .visible {
+            opacity: 1;
+        }
+
+        /* Animação de efeito de balão */
+        @keyframes balloonEffect {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Estilização dos corações */
+        .heart {
+            width: 20px;
+            height: 20px;
+            background-color: #ff5e6c;
+            position: absolute;
+            bottom: -50px;
+            animation: float 8s infinite;
+            transform: rotate(-45deg);
+            border-radius: 50% 50% 0 0;
+        }
+
+        /* Forma de coração */
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: #ff5e6c;
+            position: absolute;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .heart::before {
+            top: -10px;
+            left: 10px;
+        }
+
+        .heart::after {
+            top: 10px;
+            left: -10px;
+        }
+
+        /* Animação dos corações */
+        @keyframes float {
+            0% {
+                transform: translateX(0) rotate(-45deg);
+                bottom: 0;
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(100px) rotate(-45deg);
+                bottom: 100vh;
+                opacity: 0;
+            }
+        }
+
+        /* Posicionamento aleatório dos corações */
+        .heart:nth-child(1) {
+            left: 20%;
+            animation-duration: 6s;
+            animation-delay: 0s;
+        }
+        .heart:nth-child(2) {
+            left: 25%;
+            animation-duration: 8s;
+            animation-delay: 2s;
+        }
+        .heart:nth-child(3) {
+            left: 30%;
+            animation-duration: 7s;
+            animation-delay: 4s;
+        }
+        .heart:nth-child(4) {
+            left: 35%;
+            animation-duration: 6.5s;
+            animation-delay: 1s;
+        }
+        .heart:nth-child(5) {
+            left: 40%;
+            animation-duration: 7.5s;
+            animation-delay: 2.5s;
+        }
+        .heart:nth-child(6) {
+            left: 45%;
+            animation-duration: 8s;
+            animation-delay: 3s;
+        }
+        .heart:nth-child(7) {
+            left: 50%;
+            animation-duration: 9s;
+            animation-delay: 4s;
+        }
+        .heart:nth-child(8) {
+            left: 55%;
+            animation-duration: 8.5s;
+            animation-delay: 2s;
+        }
+        .heart:nth-child(9) {
+            left: 60%;
+            animation-duration: 7s;
+            animation-delay: 1.5s;
+        }
+        .heart:nth-child(10) {
+            left: 65%;
+            animation-duration: 6.8s;
+            animation-delay: 3.5s;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            #photoTitle {
+                font-size: 30px;
+            }
+
+            .top-image {
+                max-width: 50%;
+            }
+
+            .button {
+                font-size: 18px;
+                padding: 12px 30px;
+            }
+
+            .photo {
+                max-width: 50%;
+            }
+
+            .heart {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Título -->
+    <h1 id="specialTitle">Presente Romântico</h1>
+
+    <!-- Imagem acima do botão -->
+    <img src="bombom.webp" alt="Imagem acima do botão" class="top-image" id="topImage">
+
+    <!-- Botão para exibir a foto e a mensagem -->
+    <button class="button" id="messageButton" onclick="showPhoto()">Pra virar bombom, só ta faltando a valsa</button>
+
+    <!-- Div para exibir a foto e a mensagem -->
+    <div id="photo-container" class="hidden">
+        <h1 id="photoTitle">Mensagem Especial</h1> <!-- Título da segunda página -->
+        <img id="photo" class="photo" src="musa.jpg" alt="Foto de amor">
+        <p id="message" class="button" style="margin-top: 30px;" onclick="goBack()">porque o meu sonho você já é</p>
+    </div>
+
+    <!-- Adicionando música -->
+    <audio id="audio" src="i-wanna-be-yours_5kmqHpaM.m4a"></audio>
+
+    <script>
+        function showPhoto() {
+            // Exibir a foto e a mensagem
+            document.getElementById("photo-container").classList.remove("hidden");
+            document.getElementById("topImage").classList.add("hidden"); // Esconde a imagem acima do botão
+            document.getElementById("specialTitle").classList.add("hidden"); // Esconde o título original
+            document.getElementById("messageButton").classList.add("hidden"); // Esconde o botão
+            document.getElementById("photo").classList.add("visible"); // Exibe a foto com animação
+            document.getElementById("message").classList.add("visible"); // Exibe a mensagem
+            document.getElementById("audio").play(); // Reproduzir áudio
+
+            // Mostrar corações animados
+            var hearts = document.querySelectorAll('.heart');
+            hearts.forEach(function(heart) {
+                heart.style.display = 'block';
+            });
+        }
+
+        function goBack() {
+            // Redireciona de volta para a página inicial
+            window.location.reload();
+        }
+    </script>
+
+    <!-- Corações animados (inicialmente ocultos) -->
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
+
+</body>
+</html>
