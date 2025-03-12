@@ -108,6 +108,20 @@
             transition: opacity 1s ease;
         }
 
+
+         /* Aumentando o tamanho das imagens */
+    .top-image, .photo {
+        max-width: 40%; /* Alterado de 25% para 40% */
+        height: auto;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .top-image, .photo {
+            max-width: 50%; /* Ajustando para telas menores */
+        }
+    }
+
         .visible {
             opacity: 1;
         }
