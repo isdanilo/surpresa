@@ -10,9 +10,6 @@
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom, #00CED1 0%, #3AA7C9 50%, #1A4D69 100%);
-
-
-
             margin: 0;
             padding: 0;
             text-align: center;
@@ -55,7 +52,7 @@
 
         /* Estilização da imagem acima do botão */
         .top-image {
-            max-width: 25%;
+            width: 100%;
             height: auto;
             border-radius: 10px;
             margin-top: 20px;
@@ -90,7 +87,7 @@
 
         /* Estilização da foto */
         .photo {
-            max-width: 35%;
+            width: 100%;
             height: auto;
             border-radius: 20px;
             box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.3);
@@ -107,20 +104,6 @@
             opacity: 0;
             transition: opacity 1s ease;
         }
-
-
-         /* Aumentando o tamanho das imagens */
-    .top-image, .photo {
-        max-width: 40%; /* Alterado de 25% para 40% */
-        height: auto;
-    }
-
-    /* Responsividade */
-    @media (max-width: 768px) {
-        .top-image, .photo {
-            max-width: 50%; /* Ajustando para telas menores */
-        }
-    }
 
         .visible {
             opacity: 1;
@@ -249,7 +232,7 @@
             }
 
             .top-image {
-                max-width: 50%;
+                width: 100%;
             }
 
             .button {
@@ -258,7 +241,7 @@
             }
 
             .photo {
-                max-width: 80%;
+                width: 100%;
             }
 
             .heart {
@@ -298,33 +281,28 @@
             document.getElementById("specialTitle").classList.add("hidden"); // Esconde o título original
             document.getElementById("messageButton").classList.add("hidden"); // Esconde o botão
             document.getElementById("photo").classList.add("visible"); // Exibe a foto com animação
-            document.getElementById("message").classList.add("visible"); // Exibe a mensagem
-            document.getElementById("audio").play(); // Reproduzir áudio
+            document.getElementById("message").classList.add("visible"); // Exibe a mensagem com animação
 
-            // Mostrar corações animados
-            var hearts = document.querySelectorAll('.heart');
-            hearts.forEach(function(heart) {
-                heart.style.display = 'block';
-            });
+            // Tocar música
+            document.getElementById("audio").play();
         }
 
         function goBack() {
-            // Redireciona de volta para a página inicial
-            window.location.reload();
+            window.history.back(); // Voltar para a página anterior
         }
     </script>
 
-    <!-- Corações animados (inicialmente ocultos) -->
-    <div class="heart" style="display: none;"></div>
-    <div class="heart" style="display: none;"></div>
-    <div class="heart" style="display: none;"></div>
-    <div class="heart" style="display: none;"></div>
-    <div class="heart" style="display: none;"></div>
-    <div class="heart" style="display: none;"></div>
-    <div class="heart" style="display: none;"></div>
-    <div class="heart" style="display: none;"></div>
-    <div class="heart" style="display: none;"></div>
-    <div class="heart" style="display: none;"></div>
+    <!-- Corações flutuantes -->
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
 
 </body>
 </html>
