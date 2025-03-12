@@ -9,8 +9,7 @@
         /* Estilização do corpo */
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #FF4D4D 0%, #8B0000 50%, #4D0000 100%);
-
+            background: linear-gradient(to bottom, #00CED1 0%, #3AA7C9 50%, #1A4D69 100%);
 
 
 
@@ -65,7 +64,7 @@
 
         /* Estilização do botão */
         .button {
-            background-color: #8B0000;
+            background: #007A99;
             color: white;
             border: none;
             padding: 15px 40px;
@@ -79,7 +78,7 @@
         }
 
         .button:hover {
-            background-color:#B22222;
+            background-color: #0099B9;
             transform: translateY(-10px);
             box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
         }
@@ -91,7 +90,7 @@
 
         /* Estilização da foto */
         .photo {
-            max-width: 20%;
+            max-width: 25%;
             height: auto;
             border-radius: 20px;
             box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.3);
@@ -262,16 +261,16 @@
     <h1 id="specialTitle">Presente Romântico</h1>
 
     <!-- Imagem acima do botão -->
-    <img src="rosa.jpg" alt="Imagem acima do botão" class="top-image" id="topImage">
+    <img src="bombom.webp" alt="Imagem acima do botão" class="top-image" id="topImage">
 
     <!-- Botão para exibir a foto e a mensagem -->
-    <button class="button" id="messageButton" onclick="showPhoto()">Você não é a Garota de Ipanema</button>
+    <button class="button" id="messageButton" onclick="showPhoto()">Pra virar bombom, só ta faltando a valsa</button>
 
     <!-- Div para exibir a foto e a mensagem -->
     <div id="photo-container" class="hidden">
         <h1 id="photoTitle">Mensagem Especial</h1> <!-- Título da segunda página -->
         <img id="photo" class="photo" src="musa.jpg" alt="Foto de amor">
-        <p id="message" class="button" style="margin-top: 30px;" onclick="goBack()">Mas é a coisa mais linda e cheia de graça que já vi</p>
+        <p id="message" class="button" style="margin-top: 30px;" onclick="goBack()">porque o meu sonho você já é</p>
     </div>
 
     <!-- Adicionando música -->
