@@ -10,6 +10,9 @@
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom, #00CED1 0%, #3AA7C9 50%, #1A4D69 100%);
+
+
+
             margin: 0;
             padding: 0;
             text-align: center;
@@ -52,7 +55,7 @@
 
         /* Estilização da imagem acima do botão */
         .top-image {
-            width: 100%;
+            max-width: 25%;
             height: auto;
             border-radius: 10px;
             margin-top: 20px;
@@ -87,7 +90,7 @@
 
         /* Estilização da foto */
         .photo {
-            width: 100%;
+            max-width: 25   %;
             height: auto;
             border-radius: 20px;
             box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.3);
@@ -232,7 +235,7 @@
             }
 
             .top-image {
-                width: 100%;
+                max-width: 50%;
             }
 
             .button {
@@ -241,7 +244,7 @@
             }
 
             .photo {
-                width: 100%;
+                max-width: 50%;
             }
 
             .heart {
@@ -281,28 +284,33 @@
             document.getElementById("specialTitle").classList.add("hidden"); // Esconde o título original
             document.getElementById("messageButton").classList.add("hidden"); // Esconde o botão
             document.getElementById("photo").classList.add("visible"); // Exibe a foto com animação
-            document.getElementById("message").classList.add("visible"); // Exibe a mensagem com animação
+            document.getElementById("message").classList.add("visible"); // Exibe a mensagem
+            document.getElementById("audio").play(); // Reproduzir áudio
 
-            // Tocar música
-            document.getElementById("audio").play();
+            // Mostrar corações animados
+            var hearts = document.querySelectorAll('.heart');
+            hearts.forEach(function(heart) {
+                heart.style.display = 'block';
+            });
         }
 
         function goBack() {
-            window.history.back(); // Voltar para a página anterior
+            // Redireciona de volta para a página inicial
+            window.location.reload();
         }
     </script>
 
-    <!-- Corações flutuantes -->
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
+    <!-- Corações animados (inicialmente ocultos) -->
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
+    <div class="heart" style="display: none;"></div>
 
 </body>
 </html>
