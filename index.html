@@ -52,7 +52,7 @@
 
         /* Estilização da imagem acima do botão */
         .top-image {
-            max-width: 30%;
+            max-width: 25%;
             height: auto;
             border-radius: 10px;
             margin-top: 20px;
@@ -87,7 +87,7 @@
 
         /* Estilização da foto */
         .photo {
-            max-width: 30%;
+            max-width: 25%;
             height: auto;
             border-radius: 20px;
             box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.3);
@@ -222,7 +222,7 @@
         }
 
         /* Responsividade */
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             h1 {
                 font-size: 40px;
             }
@@ -232,16 +232,16 @@
             }
 
             .top-image {
-                max-width: 50%;
+                max-width: 50%; /* Aumenta o tamanho da imagem acima do botão em dispositivos móveis */
+            }
+
+            .photo {
+                max-width: 60%; /* Aumenta o tamanho da foto em dispositivos móveis */
             }
 
             .button {
                 font-size: 18px;
                 padding: 12px 30px;
-            }
-
-            .photo {
-                max-width: 50%;
             }
 
             .heart {
